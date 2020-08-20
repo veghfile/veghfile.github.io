@@ -1,0 +1,143 @@
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container, .container-fluid {
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.mainmenu {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar {
+  background-color: white;
+  padding-top: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.nav-link {
+  color: black;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  margin-right: 1.7em;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.launch-bttn {
+  background: linear-gradient(180deg, #6CC4A4 0%, #16BAC5 100%);
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  padding: 0.5em;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 75px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 3em;
+}
+
+.vwfu {
+  text-align: center;
+  padding-top: 3%;
+  font-size: 1.3em;
+}
+
+.hero {
+  height: 70vh;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.herotext {
+  color: #707070;
+  font-size: 1.3em;
+  width: 80%;
+}
+
+p {
+  color: #707070;
+}
+
+.steps {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.veghsteps {
+  width: 125px;
+  margin: 2em;
+}
+
+.veghft {
+  width: 64px;
+  margin: 2em;
+}
+
+.withimg {
+  background: linear-gradient(180deg, #11B9C4 0%, #6CC4A4 100%);
+  color: white;
+}
+
+#highlight {
+  color: white;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 1em;
+  color: #707070;
+}
+
+.footer {
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #6CC4A4 0%, #11B9C4 100%);
+  text-align: center;
+  padding: 2em;
+  color: white;
+  margin-bottom: 0;
+}
+
+.foot-text {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: white;
+}
+
+.footnav {
+  font-size: 1.2em;
+  color: white;
+  margin: 0.8em;
+}
+
+.smedia {
+  margin: 1em;
+}
+
+.footlogo {
+  margin-bottom: 2em;
+}
