@@ -11,10 +11,37 @@
   <link rel="apple-touch-icon" href="./assets/favicon/favicon180.png" sizes="180x180">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.filesizejs.com/filesize.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <title>Fast P2P File Transfer | Vegh</title>
 </head>
 <body>
+
+  <script>
+      let response = axios.get('https://p2p-dev.herokuapp.com/datasum')
+    .then(function (response) {
+      // handle success
+      return response.data[0].TotalCount;
+    }).then((response)=>document.getElementById("data").innerHTML=filesize(response))
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+
+    axios.get('https://p2p-dev.herokuapp.com/countUsers')
+  .then(function (response) {
+    // handle success
+    return response.data;
+  }).then((response)=>document.getElementById("users").innerHTML=numeral(response).format('0 a'))
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
+    </script>
+
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end sticky-top">
     <a class="navbar-brand" href="https://veghfile.github.io">
       <img src="./assets/Logo.svg" width="100px"></a>
@@ -149,11 +176,11 @@
     </div>
     <div class="row">
       <div class="col steps">
-        <h3>2187</h3><sup>TB</sup>
+        <h3 id="data">2187</h3>
         <p>Data Transfered</p>
       </div>
       <div class="col steps">
-        <h3>1.9</h3><sup>MN</sup>
+        <h3 id="users">1.9</h3>
         <p>Daily Users</p>
       </div>
       <div class="col steps">
@@ -177,6 +204,7 @@
         </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
