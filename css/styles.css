@@ -180,3 +180,12 @@ sup {
     font-size: 1.1em;
   }
 }
+
+.simplenav {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin: 0 5%;
+}
